@@ -1,10 +1,10 @@
 /*\
-title: $:/widgets/danielo515/sum.js
+title: $:/widgets/danielo515/substract.js
 type: application/javascript
 module-type: macro
 
 This macro returns the value of the specified field of the specified tiddler
-plus the provided value
+substracting the provided value
 
 \*/
 (function(){
@@ -17,7 +17,7 @@ plus the provided value
   Information about this macro
   */
 
-  exports.name = "sum";
+  exports.name = "substract";
 
   exports.params = [
   {name: "tiddler"},
@@ -32,7 +32,7 @@ plus the provided value
     var tiddler=$tw.wiki.getTiddler(tiddler || this.getVariable("currentTiddler")),
     currValue = tiddler.fields[field] || 0,
     value = value || 1;
-    return (+currValue) + (+value);
+    return (+currValue) - (+value);
 
   };
 
