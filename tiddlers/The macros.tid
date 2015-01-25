@@ -1,0 +1,18 @@
+created: 20150124141158962
+modified: 20150124142309090
+tags:
+title: The macros
+type: text/vnd.tiddlywiki
+
+This wiki is a demonstration of two javascript macros for basic mathematic operations.
+There are two macros, [[sum|$:/widgets/danielo515/sum.js]] and [[subtract|$:/widgets/danielo515/subtract.js]].
+They sums or subtract to a value stored on the specified field at some tiddler.
+The macros ''does not modify the tiddler'' in any way, this is an important detail.
+They just return the result of the operation, is your responsibility to store that result at some place.
+Please see the examples if you want to use the macros to modify the value in a permanent way
+
+|! parameter |! default value |! description |
+| tiddler | current tiddler | the tiddler to take the field from |
+| field | 0 | The field from where you want to take the start value |
+| ammount | 1 | the value to add or subtract to the value hold at the field |
+| max/min | none | The maximun (for sum) or minimun (for subtract) value the macro can reach|

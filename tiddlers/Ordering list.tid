@@ -1,0 +1,23 @@
+created: 20150124131657754
+modified: 20150124132510033
+order: 3
+tags: item
+title: Ordering list
+type: text/vnd.tiddlywiki
+
+This is an example in how to order a list using an order field and the sum and subtract macros:
+
+<$list filter="[tag[item]!sort[order]]">
+
+{{!!order}} {{!!title}} <$button set=!!order setTo=<<sum "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-up}}</$button>  <$button set=!!order setTo=<<subtract "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-down}}</$button>
+</$list>
+
+The code is very simple. Just a list with a very common filter and the buttons code from
+the previous [[example|Basic example]].
+
+```
+<$list filter="[tag[item]!sort[order]]">
+
+{{!!order}} {{!!title}} <$button set=!!order setTo=<<sum "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-up}}</$button>  <$button set=!!order setTo=<<subtract "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-down}}</$button>
+</$list>
+```

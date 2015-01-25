@@ -1,0 +1,27 @@
+created: 20150124123732814
+modified: 20150124132513676
+order: 1
+tags: item
+title: Basic example
+type: text/vnd.tiddlywiki
+
+This is an usage example of the macros. The macros does not modify any field or tiddler, you have to use any widget for that, for example a button. Here you have an example using the macro with a button widget. Hitting the button will add one to the current value of the order field.
+
+<$edit-text size=1 tag="input" field="order"/>
+ <$button set=!!order setTo=<<sum "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-up}}</$button>
+
+Button code
+
+```
+<$button set=!!order setTo=<<sum "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-up}}</$button>
+```
+This is the same example but using the subtract macro
+
+<$edit-text size=1 tag="input" field="order"/>
+ <$button set=!!order setTo=<<subtract "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-down}}</$button>
+
+Button code
+
+```
+<$button set=!!order setTo=<<subtract "" "order" 1>> class="tc-btn-invisible">{{$:/core/images/chevron-down}}</$button>
+```
